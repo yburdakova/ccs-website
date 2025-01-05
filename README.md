@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern aimated Portfolio
 
-## Getting Started
+A Next.js (React 19) application that serves as a portfolio and website. This project uses an Express server to handle specific backend operations and integrates various modern front-end tools for an engaging user experience.
 
-First, run the development server:
+## Table of Contents
 
+1. [Overview](#overview)
+2. [Tech Stack](#tech-stack)
+3. [Installation](#installation)
+4. [Scripts](#scripts)
+5. [Project Structure](#project-structure)
+6. [Author](#author)
+
+---
+
+## Overview
+
+- **Purpose**: Provide a platform to showcase the company'portfolio.
+- **Framework**: Built with Next.js (v13.4.3) and React (v19.0).
+- **Server**: Utilizes an Express server for backend routes and CORS handling.
+- **Styling**: Tailwind CSS for efficient, utility-first styling.
+- **Animation**: Framer Motion and `react-tsparticles` for interactive effects.
+- **Data**: Uses `mysql2` to connect to MySQL databases (if needed).
+- **Other**: Integrates Swiper for carousels and `react-icons` for icons.
+
+---
+
+## Tech Stack
+
+- **Framework**: [Next.js 13.4.3](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/) & [JavaScript](https://www.javascript.com/)
+- **Backend**: [Express](https://expressjs.com/) with [CORS](https://www.npmjs.com/package/cors)
+- **Database**: [MySQL2](https://www.npmjs.com/package/mysql2)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/),
+- **Animations**: [Framer Motion](https://www.framer.com/motion/), [react-tsparticles](https://github.com/matteobruni/tsparticles)
+- **Icons**: [react-icons](https://react-icons.github.io/react-icons)
+- **Slider/Carousel**: [Swiper](https://swiperjs.com/)
+
+---
+
+## Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yburdakova/ccs_website.git
+
+2. **Navigate to the project folder**:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd ccs_website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Install dependencies**:
+```bash
+npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Scripts**:
+In the project directory, you can run:
 
-## Learn More
+```bash 
+npm run dev
+```
+Starts the development server at http://localhost:3000. Hot reloading is enabled.
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
+Builds the application for production. It bundles React in production mode and optimizes the build for the best performance.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+```
+Runs the compiled production build. Make sure you run npm run build first.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run lint
+```
+Checks your code for potential errors and style issues using ESLint.
 
-## Deploy on Vercel
+5. **Project Structure**:
+Here is a high-level overview:
+```bash
+ccs_website/
+├─ public/               // Public static files
+├─ pages/ or app/       // Next.js routing
+├─ components/          // Reusable components
+├─ styles/              // Global or module-specific styles
+├─ server/              // Express server configuration
+├─ package.json
+├─ tsconfig.json
+├─ tailwind.config.js
+└─ ...
+```
+Note: Depending on the Next.js version (App Router vs. Pages Router), your file structure may vary.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+6.**Author**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Author Name**: Yana Burdakova
+- **Email**: burdakovacom@gmail.com
+- **Portfolio**: https://burdakova.com
+- **GitHub**: [Your GitHub Profile](https://github.com/yburdakova)
+- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/yana-burdakova/)
