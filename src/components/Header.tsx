@@ -6,7 +6,7 @@ import { socialsData } from '@/data/socialsData';
 
 const Header = () => {
   return (
-    <div className='mx-[5%] my-10 flex justify-between items-end'>
+    <header className='mx-[5%] my-10 flex justify-between items-end'>
       <Link href={"/"}>
         <Image src={logo} alt="logo" style={{ width: '300px'}} />
       </Link>
@@ -17,7 +17,7 @@ const Header = () => {
           </Link>
         ))}
       </div>
-    </div>
+    </header>
   )
 }
 
