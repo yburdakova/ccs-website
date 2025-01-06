@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 import tailwindScrollbar from 'tailwind-scrollbar';
 
 export default {
+  darkMode: 'class',
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,7 +19,7 @@ export default {
       },
       keyframes: {
         shake: {
-         '0%, 100%': { transform: 'rotate(0deg)' },
+          '0%, 100%': { transform: 'rotate(0deg)' },
           '25%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
           '75%': { transform: 'rotate(-3deg)' },
