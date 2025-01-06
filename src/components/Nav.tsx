@@ -18,7 +18,7 @@ const Nav = () => {
           <Link
             href={link.path}
             key={`navlink-${index}`}
-            className={`${link.path === pathname && 'accent'}`}>
+            className={`${link.path === pathname && 'accent'} relative flex items-center group hover:accent`}>
             {link.icon}
           </Link>
         ))}
