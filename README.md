@@ -29,8 +29,6 @@ A Next.js (React 19) application that serves as a portfolio and website. This pr
 
 - **Framework**: [Next.js 13.4.3](https://nextjs.org/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/) & [JavaScript](https://www.javascript.com/)
-- **Backend**: [Express](https://expressjs.com/) with [CORS](https://www.npmjs.com/package/cors)
-- **Database**: [MySQL2](https://www.npmjs.com/package/mysql2)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/),
 - **Animations**: [Framer Motion](https://www.framer.com/motion/), [react-tsparticles](https://github.com/matteobruni/tsparticles)
 - **Icons**: [react-icons](https://react-icons.github.io/react-icons)
