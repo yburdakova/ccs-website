@@ -12,7 +12,7 @@ const Header = () => {
       </Link>
       <div className="flex gap-4 align-bottom text-2xl z-50">
         {socialsData.map((link, index) => (
-          <Link href={link.path} key={`navlink-${index}`} >
+          <Link href={link.path} key={`navlink-${index}`} target='_blank'>
             {link.icon}
           </Link>
         ))}

@@ -11,8 +11,7 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
-        linkcolor: "var(--linkcolor)",
+        foreground: "var(--foreground)"
       },
     },
   },

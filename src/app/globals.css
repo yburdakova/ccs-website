@@ -5,7 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --accentcolor: #3990CE;
+  --accentcolor: #3990CE;;
   --linkcolor:  #175883;
 }
 
@@ -13,7 +13,7 @@
   :root {
     --background: #051927;
     --foreground: #ededed;
-    --accentcolor: #175883;
+    --accentcolor: #3990CE;
     --linkcolor: #ededed;
   }
 }
@@ -27,3 +27,11 @@ a {
   color: var(--linkcolor);
 }
 
+@layer utilities {
+  .accent {
+    color: var(--accentcolor);
+  }
+  .linkcolor{
+    color: var(--linkcolor);
+    }
+}
