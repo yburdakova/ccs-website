@@ -7,7 +7,7 @@ import SoftwareIcon from "@/components/icons/SoftwareIcon";
 
 export const navData = [
   {
-    name: 'Home',
+    name: 'Main Page',
     path: '/',
     icon: <HomeIcon/>
   },

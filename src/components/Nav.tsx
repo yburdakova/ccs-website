@@ -18,8 +18,16 @@ const Nav = () => {
           <Link
             href={link.path}
             key={`navlink-${index}`}
-            className={`${link.path === pathname && 'accent'} relative flex items-center group hover:accent`}>
-            {link.icon}
+            className={`${link.path === pathname && 'accent'} relative flex items-center group hover:accent transition-all duration-300`}>
+              <div className="absolute pr-16 right-2 hidden xl:group-hover:flex">
+                <div className="bg-white border-2 dark:border-0 relative flex items-center p-[6px] rounded-[5px]">
+                  <div className="text-[12px] leading-none font-semibold capitalize whitespace-nowrap">
+                    {link.name}
+                  </div>
+                  <div className="absolute left-full top-[50%] translate-y-[-50%] border-solid border-l-[8px] border-y-[6px] border-r-0 dark:border-l-white dark:border-y-transparent border-l-gray-300 border-y-transparent"></div>
+                </div>
+              </div>
+              {link.icon}
           </Link>
         ))}
       </div>
