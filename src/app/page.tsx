@@ -13,7 +13,7 @@ export default function Home() {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="text-3xl font-bold my-6"
+          className="text-3xl font-bold my-6 xl:max-w-xl leading-relax"
         >
           Innovative <span className="accent">Technology Solutions</span> For Public Management
         </motion.div>
@@ -32,7 +32,7 @@ export default function Home() {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className="hidden mx-auto my-4 md:flex md:max-w-xl xl:max-w-none xl:mx-0"
+            className="hidden mx-auto my-4 md:flex md:max-w-xl xl:max-w-xl xl:mx-0"
           >
             <div className="flex flex-1 xl:gap-x-6">
               {/* Experience */}
