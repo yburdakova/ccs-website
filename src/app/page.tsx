@@ -8,7 +8,7 @@ export default function Home() {
     <AnimatePresence>
       <div className="">
         <motion.div
-          variants={fadeIn('down', 0.2)}
+          variants={fadeIn('down', 0.3)}
           initial="hidden"
           animate="show"
           exit="hidden"
