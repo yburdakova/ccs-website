@@ -12,24 +12,8 @@ const ThemeSwitcher = () => {
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       setSystemTheme(prefersDark ? "dark" : "light");
     }
-    logTheme();
     applyTheme();
   }, [theme,systemTheme]);
-
-  const logTheme = () => {
-    if (theme === "system") {
-      if (systemTheme){
-        console.log(`Clicked system theme`);
-        console.log(`Applying theme: ${systemTheme}`);
-      }
-    } else if (theme === "light") {
-      console.log(`Clicked light theme`);
-      console.log(`Applying theme: ${theme}`);
-    } else if (theme === "dark") {
-      console.log(`Clicked dark theme`);
-      console.log(`Applying theme: ${theme}`);
-    }
-  };
 
   const applyTheme = () => {
     const root = document.documentElement;
@@ -37,7 +21,7 @@ const ThemeSwitcher = () => {
     if (theme === "system") {
       if (systemTheme) {
         root.classList.remove("light", "dark");
-        root.classList.add(systemTheme); // Добавляем только если systemTheme не пустое
+        root.classList.add(systemTheme);
         localStorage.setItem("theme", "system");
       }
     } else if (theme === "light") {
@@ -53,7 +37,7 @@ const ThemeSwitcher = () => {
 
 
   return (
-    <div className="relative flex items-center justify-around w-36 py-1 mx-2 rounded-full border border-gray-400 bg-background z-50">
+    <div className="relative flex items-center justify-around w-36 py-1 mx-2 rounded-full border border-gray-400 bg-background z-10">
       <div
         className={`absolute top-0 h-full w-[48px] border border-gray-400 rounded-full transition-transform duration-300 ease-in-out`}
         style={{

@@ -7,19 +7,21 @@ import ThemeSwitcher from './ThemeSwitcher';
 
 const Header = () => {
   return (
-    <header className="mx-[5%] my-10 flex justify-between items-end">
+    <header className="my-10 flex justify-center">
+      <div className="flex justify-between items-end w-[80%]">
       <Link href={"/"}>
         <Image src={logo} alt="logo" style={{ width: '300px' }} />
       </Link>
       <div className="flex flex-col items-end gap-4">
         <ThemeSwitcher/>
-        <div className="flex w-full px-4 align-bottom justify-between text-2xl z-50 items-center">
+        <div className="flex w-full px-4 align-bottom justify-between text-2xl z-10 items-center">
           {socialsData.map((link, index) => (
             <Link href={link.path} key={`navlink-${index}`} target="_blank">
               {link.icon}
             </Link>
           ))}
         </div>
+      </div>
       </div>
     </header>
   );

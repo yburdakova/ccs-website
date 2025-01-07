@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Header from "@/components/Header";
 import Support from "@/components/Support";
 import Footer from "@/components/Footer";
+import Layout from "@/components/Layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,9 +24,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+
+
   return (
     <html lang="en">
       <body
@@ -34,7 +37,7 @@ export default function RootLayout({
         <Header/>
         <Nav/>
         <Support/>
-        <main className="flex-1 mx-1 xl:mx-[5%]">{children}</main>
+          <Layout>{children}</Layout>
         <Footer/>
       </body>
     </html>
