@@ -16,7 +16,7 @@ const Layout = ({
     <AnimatePresence mode="wait">
       <motion.div key={pathname} className="flex-1 flex justify-center w-full">
         <Transition />
-        <main className="flex-1 flex justify-center w-[80%]">
+        <main className="flex-1 flex justify-center">
           {children}
         </main>
       </motion.div>

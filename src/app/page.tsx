@@ -7,7 +7,7 @@ import CountUp from "react-countup";
 export default function Home() {
   return (
     <AnimatePresence>
-      <div className="">
+      <div className="w-[80%]">
         <motion.div
           variants={fadeIn('down', 0.3)}
           initial="hidden"
