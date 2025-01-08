@@ -1,5 +1,6 @@
 "use client";
 
+import ParticlesContainer from "@/components/ParticlesContainer";
 import ServiceCardsSlider from "@/components/ServiceCardsSlider";
 import { fadeIn } from "@/data/variants";
 import { AnimatePresence, motion } from "framer-motion";
@@ -8,6 +9,7 @@ import CountUp from "react-countup";
 export default function Home() {
   return (
     <AnimatePresence>
+      <ParticlesContainer key="particlesContainer"/>
       <div className='z-10 flex xl:items-center items-start w-[80%]'>
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
@@ -85,7 +87,7 @@ export default function Home() {
             </div>
           </motion.div>
           </div>
-          <motion.div 
+          <motion.div
             variants={fadeIn('down', 0.6)}
             initial='hidden'
             animate='show'

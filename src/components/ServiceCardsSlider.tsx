@@ -42,7 +42,7 @@ const ServiceCardsSlider = () => {
       className='xl:h-[500px] h-[420px] w-[360px]'
     >
       {serviceCards.slides.map((slide, index) => {
-        return <SwiperSlide key={index}>
+        return <SwiperSlide key={`slide-${index}`}>
           <div className='relative flex items-center justify-center overflow-hidden rounded-3xl group  h-[350px] xl:h-[400px] bg-background shadow-[0px_0px_20px_1px_rgba(57,144,206,0.75)] m-6'>
             <div className="relative flex items-center justify-center overflow-hidden group p-6 h-[350px] xl:h-[400px]">
               <div className="flex flex-col">

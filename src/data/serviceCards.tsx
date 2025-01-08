@@ -15,7 +15,7 @@ export const serviceCards = {
     title: 'Scanning and Digitization Services',
     subtitle: 'To improve the security and accessibility of county records, we offer document scanning services. Our advanced image enhancement capabilities can make images of older documents more readable than the original.',
     image: scan_img,
-    path: '/service',
+    path: '/services',
   },
   {
     title: 'Get Certificate Now',
