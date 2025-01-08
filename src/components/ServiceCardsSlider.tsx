@@ -39,12 +39,12 @@ const ServiceCardsSlider = () => {
       }}
       speed={1000}
       modules={[Pagination, Autoplay, EffectCreative]}
-      className='h-[500px] w-[360px]'
+      className='xl:h-[500px] h-[420px] w-[360px]'
     >
       {serviceCards.slides.map((slide, index) => {
         return <SwiperSlide key={index}>
-          <div className='relative flex items-center justify-center overflow-hidden rounded-3xl group h-[400px] bg-background shadow-[0px_0px_20px_1px_rgba(57,144,206,0.75)] m-6'>
-            <div className="relative flex items-center justify-center overflow-hidden group p-6 h-[400px]">
+          <div className='relative flex items-center justify-center overflow-hidden rounded-3xl group  h-[350px] xl:h-[400px] bg-background shadow-[0px_0px_20px_1px_rgba(57,144,206,0.75)] m-6'>
+            <div className="relative flex items-center justify-center overflow-hidden group p-6 h-[350px] xl:h-[400px]">
               <div className="flex flex-col">
               <Image
                 src={slide.image}
@@ -53,8 +53,8 @@ const ServiceCardsSlider = () => {
                 alt='Card image'
                 className='self-center mb-4'
               />
-                <div className="text-2xl mb-6 font-medium">{slide.title}</div>
-                <div className="text-gray-400">{slide.subtitle}</div>
+                <div className="xl:text-2xl text-2xl xl:mb-6 mb-2 font-medium">{slide.title}</div>
+                <div className="text-gray-400 text-sm xl:text-base">{slide.subtitle}</div>
               </div>
               {/* overlay gradient */}
               <div className="absolute inset-0 bg-background opacity-0 group-hover:opacity-80 transition-all duration-700"></div>

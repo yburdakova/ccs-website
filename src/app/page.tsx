@@ -8,11 +8,11 @@ import CountUp from "react-countup";
 export default function Home() {
   return (
     <AnimatePresence>
-      <div className='z-10 flex items-center w-[80%]'>
+      <div className='z-10 flex xl:items-center items-start w-[80%]'>
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* text */}
-          <div className="flex text-center xl:w-[38vw] flex-col lg:text-left mb-4 xl:mb-0">
+          <div className="flex text-center xl:w-[38vw] flex-col lg:text-left mb-2 xl:mb-0">
           <motion.div
             variants={fadeIn('down', 0.3)}
             initial="hidden"
@@ -27,7 +27,7 @@ export default function Home() {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='max-w-sm mx-auto mb-6 text-sm sm:mb-2 sm:text-xl md:mb-10 xl:max-w-xl xl:mx-0 xl:mb-16'
+            className='max-w-sm mx-auto mb-1 text-sm sm:mb-2 sm:text-xl md:mb-10 xl:max-w-xl xl:mx-0 xl:mb-16'
             >
             We have provided innovative, user-friendly software solutions for over 40 years. With exceptional customer service and cutting-edge technology, we help county offices deliver efficient, reliable services to their communities.
           </motion.p>
