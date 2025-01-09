@@ -105,7 +105,7 @@ const ParticlesContainer = () => {
   return init ? (
     <Particles
       id="tsparticles"
-      className="absolute w-full h-full translate-z-0 z-0"
+      className="absolute w-full max-h-screen translate-z-0 z-0"
       particlesLoaded={particlesLoaded}
       options={options}
     />
