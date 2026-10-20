@@ -1,9 +1,5 @@
-import React from 'react'
+import { redirect } from "next/navigation";
 
-const Quotes = () => {
-  return (
-    <div>Quotes</div>
-  )
+export default function QuotesRedirect() {
+  redirect("/digitization#quote");
 }
-
-export default Quotes

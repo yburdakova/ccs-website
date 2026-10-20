@@ -1,106 +1,94 @@
-"use client";
+import type { Metadata } from "next";
+import Link from "next/link";
+import PageFrame from "@/components/layout/PageFrame";
+import Reveal from "@/components/motion/Reveal";
+import InquiryForm from "@/components/forms/InquiryForm";
+import ArchiveHero from "@/components/visuals/ArchiveHero";
+import { ArrowIcon } from "@/components/ui/Icons";
+import { pageSections, pillars } from "@/content/site";
 
-import ParticlesContainer from "@/components/ParticlesContainer";
-import ServiceCardsSlider from "@/components/ServiceCardsSlider";
-import { fadeIn } from "@/data/variants";
-import { AnimatePresence, motion } from "framer-motion";
-import CountUp from "react-countup";
+export const metadata: Metadata = {
+  title: "Government Records, Software & Intelligent Workflows",
+  description: "CCS brings digitization, government records software, and tailored AI and automation into one trusted technology partner.",
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
-    <AnimatePresence>
-      <ParticlesContainer key="particlesContainer"/>
-      <div className='z-10 flex xl:items-center items-start w-[80%]'>
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-x-8">
-          {/* text */}
-          <div className="flex text-center xl:w-[38vw] flex-col lg:text-left mb-2 xl:mb-0">
-          <motion.div
-            variants={fadeIn('down', 0.3)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="text-3xl font-bold my-6 xl:max-w-xl leading-relax"
-          >
-            Innovative <span className="accent">Technology Solutions</span> For Public Management
-          </motion.div>
-          <motion.p
-            variants={fadeIn('down', 0.3)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='max-w-sm mx-auto mb-1 text-sm sm:mb-2 sm:text-xl md:mb-10 xl:max-w-xl xl:mx-0 xl:mb-16'
-            >
-            We have provided innovative, user-friendly software solutions for over 40 years. With exceptional customer service and cutting-edge technology, we help county offices deliver efficient, reliable services to their communities.
-          </motion.p>
-
-
-            {/* Coutup */}
-            <motion.div
-            variants={fadeIn('right', 0.6)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className="hidden mx-auto my-4 md:flex md:max-w-xl xl:max-w-xl xl:mx-0"
-          >
-            <div className="flex flex-1 xl:gap-x-6">
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="mb-2 text-2xl font-extrabold xl:text-4xl accent">
-                  <CountUp
-                    start={0}
-                    end={40}
-                    duration={5}
-                  /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Years of experience</div>
-              </div>
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="mb-2 text-2xl font-extrabold xl:text-4xl accent">
-                  <CountUp
-                    start={0}
-                    end={5}
-                    duration={5}
-                  /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Unique software</div>
-              </div>
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="mb-2 text-2xl font-extrabold xl:text-4xl accent">
-                  <CountUp
-                    start={0}
-                    end={22}
-                    duration={5}
-                  /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Counties as customers</div>
-              </div>
-              <div className="relative flex-1 ">
-                <div className="mb-2 text-2xl font-extrabold xl:text-4xl accent">
-                  <CountUp
-                    start={0}
-                    end={30}
-                    duration={5}
-                  /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Completed projects</div>
-              </div>
-            </div>
-          </motion.div>
-          </div>
-          <motion.div
-            variants={fadeIn('down', 0.6)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className="w-full xl:max-w-[40%]"
-          >
-            <ServiceCardsSlider/>
-          </motion.div>
+    <PageFrame title="CCS / Home" sections={pageSections.home}>
+      <section className="hero hero--home" id="overview">
+        <div className="hero__copy">
+          <Reveal><span className="eyebrow">Government technology · thoughtfully advanced</span></Reveal>
+          <Reveal delay={.08}><h1>Preserving the Past.<br /><em>Powering the Future.</em></h1></Reveal>
+          <Reveal delay={.16}><p className="hero__lede">CCS brings physical records, purpose-built software, and intelligent automation together for the public-sector workflows that matter.</p></Reveal>
+          <Reveal className="hero__actions" delay={.24}>
+            <a className="button button--primary" href="#what-we-do">Explore our solutions <ArrowIcon /></a>
+            <a className="button button--ghost" href="#contact">Contact CCS</a>
+          </Reveal>
+          <Reveal className="hero__footnote" delay={.32}>
+            <span>01</span><p>Three disciplines.<br />One continuous record journey.</p>
+          </Reveal>
         </div>
-      </div>
-    </div>
-    </AnimatePresence>
+        <Reveal className="hero__visual" delay={.12}><ArchiveHero /></Reveal>
+      </section>
+
+      <section className="section section--pillars" id="what-we-do">
+        <div className="section-heading section-heading--split">
+          <div><span className="eyebrow">What we do</span><h2>From fragile source<br />to living system.</h2></div>
+          <p>Three focused practices connect the full lifecycle of public information — how it is preserved, managed, found, and put to work.</p>
+        </div>
+        <div className="pillar-composition">
+          {pillars.map((pillar, index) => (
+            <Reveal key={pillar.title} className={`pillar pillar--${index + 1}`} delay={index * .08}>
+              <Link href={pillar.href}>
+                <div className={`pillar__visual pillar__visual--${pillar.visual}`} aria-hidden="true"><i /><i /><i /><i /></div>
+                <span className="pillar__number">{pillar.number}</span>
+                <small>{pillar.eyebrow}</small>
+                <h3>{pillar.title}</h3>
+                <p>{pillar.description}</p>
+                <span className="text-link">Explore practice <ArrowIcon /></span>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section--dark principles" id="why-ccs">
+        <div className="section-heading section-heading--split">
+          <div><span className="eyebrow eyebrow--light">Why CCS</span><h2>Progress without<br /><em>losing context.</em></h2></div>
+          <p>Government records require more than generic technology. CCS approaches each engagement with attention to source material, operational reality, and responsible human review.</p>
+        </div>
+        <div className="principle-list">
+          {[
+            ["01", "Records first", "Start with the condition, structure, and purpose of the information — not a preselected tool."],
+            ["02", "Human validation", "Use technology to support informed review, not to hide uncertainty or replace accountable decisions."],
+            ["03", "Built for continuity", "Connect preservation and access with systems designed around real government workflows."],
+            ["04", "Tailored progress", "Apply modern engineering where it creates a clear, useful path forward for the agency."],
+          ].map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}
+        </div>
+      </section>
+
+      <section className="section evidence" id="partnerships">
+        <div className="section-heading section-heading--split">
+          <div><span className="eyebrow">Trusted partnerships</span><h2>Proof belongs<br />to the record.</h2></div>
+          <p>Client evidence will appear here only after names, marks, quotations, and usage rights are approved.</p>
+        </div>
+        <div className="evidence-grid">
+          <div className="evidence-placeholder evidence-placeholder--wide"><span>Approved client marks</span><strong>[APPROVED_CLIENT_LOGOS]</strong></div>
+          <div className="evidence-placeholder"><span>Verified customer voice</span><strong>[VERIFIED_TESTIMONIALS]</strong></div>
+          <div className="evidence-placeholder"><span>Documented outcomes</span><strong>[CASE_STUDIES]</strong></div>
+        </div>
+      </section>
+
+      <section className="legacy-bridge">
+        <div className="legacy-bridge__paper"><span>Past</span><i /><i /><i /></div>
+        <div className="legacy-bridge__copy"><span className="eyebrow eyebrow--light">Legacy meets innovation</span><h2>Technology changes.<br /><em>Trust endures.</em></h2><p>See how a history of preserving records points toward today&apos;s intelligent government systems.</p><Link className="button button--light" href="/about">Explore the CCS story <ArrowIcon /></Link></div>
+        <div className="legacy-bridge__network" aria-hidden="true"><i /><i /><i /><i /><i /></div>
+      </section>
+
+      <section className="section" id="contact">
+        <InquiryForm kind="contact" title="What could work better for your office?" description="Share the challenge. Once an approved secure endpoint is connected, this form will route inquiries to the CCS team." />
+      </section>
+    </PageFrame>
   );
 }
-
-

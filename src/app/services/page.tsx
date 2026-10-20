@@ -1,9 +1,5 @@
-import React from 'react'
+import { redirect } from "next/navigation";
 
-const Services = () => {
-  return (
-    <div>Services</div>
-  )
+export default function ServicesRedirect() {
+  redirect("/digitization");
 }
-
-export default Services

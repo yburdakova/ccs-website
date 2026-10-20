@@ -1,9 +1,5 @@
-import React from 'react'
+import { redirect } from "next/navigation";
 
-const Support = () => {
-  return (
-    <div>Support</div>
-  )
+export default function SupportRedirect() {
+  redirect("/#contact");
 }
-
-export default Support
