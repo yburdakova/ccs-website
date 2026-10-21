@@ -18,7 +18,6 @@ export default function Home() {
     <PageFrame title="CCS / Home" sections={pageSections.home}>
       <section className="hero hero--home" id="overview">
         <div className="hero__copy">
-          <Reveal><span className="eyebrow">Government technology · thoughtfully advanced</span></Reveal>
           <Reveal delay={.08}><h1>Preserving the Past.<br /><em>Powering the Future.</em></h1></Reveal>
           <Reveal delay={.16}><p className="hero__lede">CCS brings physical records, purpose-built software, and intelligent automation together for the public-sector workflows that matter.</p></Reveal>
           <Reveal className="hero__actions" delay={.24}>
